@@ -171,7 +171,7 @@ with tab3:
     | Analytics engine | Also on that same RDS instance | Snowflake Analytics (elastic, separated) |
     | Postgres → Analytics | Custom Lambdas, CDC scripts | pg_lake (native Iceberg bridge) |
     | External sources | Custom Lambdas per source | Fivetran (managed connectors) |
-    | Orchestration | Custom orchestrator | Snowflake Tasks / dbt Cloud |
+    | Orchestration | Custom orchestrator | Snowflake Tasks + native dbt Projects |
     | Security patches | Manual | Automatic (both PG and analytics) |
     | Backups | Configured per-instance | Automatic |
     | High availability | Multi-AZ setup, failover config | Built-in HA option |

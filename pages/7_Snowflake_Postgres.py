@@ -106,12 +106,12 @@ with tab1:
     | Patching & upgrades | No maintenance windows to schedule |
     | High availability | Built-in HA option, automatic failover |
     | Backups | Automatic, no cron jobs |
-    | Connection pooling | PgBouncer built-in for high concurrency | Built-in connection pooling for high concurrency |
+    | Connection pooling | Built-in connection pooling for high concurrency |
     | Security | Private network isolation, TLS enforced |
     | Monitoring | Integrated with Snowflake account |
     
     ```sql
-    -- Create a managed Postgres instance in Snowflake
+    -- Create a managed Postgres instance in Snowflake (illustrative; refer to docs for current DDL)
     CREATE POSTGRES INSTANCE cavs_operational
       COMPUTE_POOL = 'STANDARD_2'
       STORAGE_SIZE_GB = 100

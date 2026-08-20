@@ -105,10 +105,10 @@ with tab3:
 <div style="background: #0a1929; border-radius: 12px; padding: 1.5rem; border: 1px solid #FFB81C33;">
   <div style="display: flex; flex-direction: column; align-items: center; gap: 0.8rem;">
     <div style="display: flex; gap: 0.5rem; flex-wrap: wrap; justify-content: center;">
-      <div style="background: #1a2d4d; border: 1px solid #FFB81C; border-radius: 6px; padding: 0.5rem 0.8rem; color: #fff; font-size: 0.8rem;">Postgres</div>
       <div style="background: #1a2d4d; border: 1px solid #FFB81C; border-radius: 6px; padding: 0.5rem 0.8rem; color: #fff; font-size: 0.8rem;">Salesforce</div>
       <div style="background: #1a2d4d; border: 1px solid #FFB81C; border-radius: 6px; padding: 0.5rem 0.8rem; color: #fff; font-size: 0.8rem;">Ticketmaster</div>
       <div style="background: #1a2d4d; border: 1px solid #FFB81C; border-radius: 6px; padding: 0.5rem 0.8rem; color: #fff; font-size: 0.8rem;">Google Analytics</div>
+      <div style="background: #1a2d4d; border: 1px solid #FFB81C; border-radius: 6px; padding: 0.5rem 0.8rem; color: #fff; font-size: 0.8rem;">Workday / HubSpot</div>
     </div>
     <div style="color: #FFB81C; font-size: 1.3rem;">↓</div>
     <div style="background: #041E42; border: 2px solid #FFB81C; border-radius: 8px; padding: 0.8rem 2rem; text-align: center;">
@@ -299,10 +299,10 @@ st.markdown("""
     <div style="text-align: center;">
       <div style="color: #FFB81C; font-size: 0.7rem; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 0.4rem;">Sources</div>
       <div style="display: flex; flex-direction: column; gap: 0.3rem;">
-        <div style="background: #1a2d4d; border: 1px solid #FFB81C66; border-radius: 4px; padding: 0.3rem 0.6rem; color: #fff; font-size: 0.75rem;">Postgres</div>
         <div style="background: #1a2d4d; border: 1px solid #FFB81C66; border-radius: 4px; padding: 0.3rem 0.6rem; color: #fff; font-size: 0.75rem;">Salesforce</div>
         <div style="background: #1a2d4d; border: 1px solid #FFB81C66; border-radius: 4px; padding: 0.3rem 0.6rem; color: #fff; font-size: 0.75rem;">Ticketmaster</div>
         <div style="background: #1a2d4d; border: 1px solid #FFB81C66; border-radius: 4px; padding: 0.3rem 0.6rem; color: #fff; font-size: 0.75rem;">Google / Meta</div>
+        <div style="background: #1a2d4d; border: 1px solid #FFB81C66; border-radius: 4px; padding: 0.3rem 0.6rem; color: #fff; font-size: 0.75rem;">Workday</div>
       </div>
     </div>
     <div style="color: #FFB81C; font-size: 1.5rem;">→</div>
@@ -342,7 +342,7 @@ st.markdown("""
 </div>
 """, unsafe_allow_html=True)
 
-st.markdown("**Orchestration:** dbt Cloud scheduling + Snowflake Tasks for Dynamic Tables")
+st.markdown("**Orchestration:** Snowflake Tasks (native dbt Projects + Dynamic Tables)")
 
 st.markdown("---")
 
@@ -352,7 +352,7 @@ st.markdown("""
     <strong style="color: #FFB81C;">Why This Matters for the Cavaliers</strong><br><br>
     You already use dbt — that investment carries forward. Your models, tests, and documentation 
     migrate with minimal changes. Fivetran replaces your custom ingestion scripts with managed, 
-    reliable connectors for every source you care about (Postgres, Salesforce, Ticketmaster, etc.).<br><br>
+    reliable connectors for every external source you care about (Salesforce, Ticketmaster, Google, etc.).<br><br>
     The result: <strong>no custom orchestrator, no Lambda maintenance, no ingestion scripts</strong> — 
     just managed connectors feeding clean data into a transformation framework your team already knows.<br><br>
     And for real-time game-day use cases, Dynamic Tables give you sub-minute freshness 
