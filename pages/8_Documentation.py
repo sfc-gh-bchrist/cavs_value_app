@@ -81,8 +81,7 @@ st.markdown("""
 | Dynamic Tables Best Practices | [docs.snowflake.com/en/user-guide/dynamic-tables/best-practices](https://docs.snowflake.com/en/user-guide/dynamic-tables/best-practices) |
 | dbt Projects on Snowflake (Native) | [docs.snowflake.com/en/user-guide/data-engineering/dbt-projects-on-snowflake](https://docs.snowflake.com/en/user-guide/data-engineering/dbt-projects-on-snowflake) |
 | Snowflake Tasks (Orchestration) | [docs.snowflake.com/en/user-guide/tasks-intro](https://docs.snowflake.com/en/user-guide/tasks-intro) |
-| dbt + Snowflake (Partner Docs) | [docs.getdbt.com/docs/core/connect-data-platform/snowflake-setup](https://docs.getdbt.com/docs/core/connect-data-platform/snowflake-setup) |
-| Fivetran + Snowflake | [fivetran.com/docs/destinations/snowflake](https://fivetran.com/docs/destinations/snowflake) |
+| Fivetran + Snowflake | [docs.snowflake.com/en/user-guide/ecosystem-fivetran](https://docs.snowflake.com/en/user-guide/ecosystem-fivetran) |
 """)
 
 st.markdown("## AI & Machine Learning")
