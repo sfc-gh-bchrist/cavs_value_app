@@ -79,6 +79,7 @@ st.markdown("""
 | Dynamic Tables Overview | [docs.snowflake.com/en/user-guide/dynamic-tables/overview](https://docs.snowflake.com/en/user-guide/dynamic-tables/overview) |
 | Dynamic Tables Target Lag | [docs.snowflake.com/en/user-guide/dynamic-tables/target-lag](https://docs.snowflake.com/en/user-guide/dynamic-tables/target-lag) |
 | Dynamic Tables Best Practices | [docs.snowflake.com/en/user-guide/dynamic-tables/best-practices](https://docs.snowflake.com/en/user-guide/dynamic-tables/best-practices) |
+| dbt Projects on Snowflake (Native) | [docs.snowflake.com/en/user-guide/data-engineering/dbt-projects-on-snowflake](https://docs.snowflake.com/en/user-guide/data-engineering/dbt-projects-on-snowflake) |
 | Snowflake Tasks (Orchestration) | [docs.snowflake.com/en/user-guide/tasks-intro](https://docs.snowflake.com/en/user-guide/tasks-intro) |
 | dbt + Snowflake (Partner Docs) | [docs.getdbt.com/docs/core/connect-data-platform/snowflake-setup](https://docs.getdbt.com/docs/core/connect-data-platform/snowflake-setup) |
 | Fivetran + Snowflake | [fivetran.com/docs/destinations/snowflake](https://fivetran.com/docs/destinations/snowflake) |

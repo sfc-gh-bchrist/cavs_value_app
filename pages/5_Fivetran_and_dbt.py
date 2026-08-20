@@ -143,7 +143,7 @@ st.markdown("## dbt + Snowflake")
 
 tab1, tab2, tab3, tab4 = st.tabs([
     "Migration Path",
-    "dbt Cloud Integration",
+    "dbt Projects on Snowflake (Native)",
     "Dynamic Tables Alternative",
     "Your dbt Project"
 ])
@@ -181,27 +181,45 @@ with tab1:
 
 with tab2:
     st.markdown("""
-    ### dbt Cloud: Native Snowflake Integration
+    ### dbt Projects on Snowflake — Fully Native
     
-    If you move to dbt Cloud (or already use it), you get:
+    Snowflake now runs dbt **natively** as a first-class platform feature. No external 
+    infrastructure, no dbt Cloud subscription required:
     
     | Feature | Benefit |
     |---------|---------|
-    | **Snowflake Native Auth** | OAuth, key-pair — no passwords in config |
-    | **IDE in browser** | Develop and test dbt models directly |
-    | **Job scheduling** | Cron-based or event-triggered runs |
-    | **CI/CD** | PR-based slim CI (only test changed models) |
-    | **Discovery** | Auto-generated docs, lineage, freshness |
-    | **Semantic Layer** | Metrics definitions consumed by BI tools |
-    | **Notifications** | Slack, email, webhook on failure |
+    | **Managed dbt runtime** | Snowflake runs dbt Core for you — no servers to manage |
+    | **Deploy as Snowflake objects** | `CREATE DBT PROJECT` — dbt projects become governed objects |
+    | **Native orchestration** | Schedule with Snowflake Tasks — no external scheduler |
+    | **CI/CD with Snowflake CLI** | `snow dbt deploy` from GitHub Actions, GitLab, etc. |
+    | **Built-in observability** | Run history, logs, artifacts, column-level lineage in Snowsight |
+    | **Workspace development** | Develop in Snowflake Workspaces — no local install needed |
+    | **No extra fees** | Runs on your virtual warehouse — standard compute costs only |
     
-    **dbt Cloud + Snowflake Partner Connect:**
-    - One-click setup from Snowflake UI
-    - Auto-provisions service user and warehouse
-    - Pre-configured connection
+    ```sql
+    -- Deploy your dbt project as a Snowflake object
+    CREATE DBT PROJECT cavs_analytics
+      FROM '@my_stage/cavs_dbt_project'
+      WAREHOUSE = WH_TRANSFORM;
     
-    dbt Cloud is the recommended path for teams wanting managed orchestration 
-    without building their own scheduler.
+    -- Execute it (runs dbt build under the hood)
+    EXECUTE DBT PROJECT cavs_analytics
+      ARGS = 'build --select tag:daily';
+    
+    -- Schedule with a Snowflake Task
+    CREATE TASK run_dbt_daily
+      WAREHOUSE = WH_TRANSFORM
+      SCHEDULE = 'USING CRON 0 6 * * * America/New_York'
+    AS
+      EXECUTE DBT PROJECT cavs_analytics
+        ARGS = 'build';
+    ```
+    
+    **Why this matters:** You don't need dbt Cloud or any external service. Your dbt project 
+    lives inside Snowflake as a managed object — deployed, scheduled, monitored, and governed 
+    in the same platform as your data.
+    
+    [Documentation](https://docs.snowflake.com/en/user-guide/data-engineering/dbt-projects-on-snowflake)
     """)
 
 with tab3:
