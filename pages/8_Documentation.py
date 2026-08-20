@@ -43,7 +43,7 @@ st.markdown("""
 |-------|-------------------|
 | Secure Data Sharing Overview | [docs.snowflake.com/en/user-guide/data-sharing-intro](https://docs.snowflake.com/en/user-guide/data-sharing-intro) |
 | Secure Views for Sharing | [docs.snowflake.com/en/user-guide/data-sharing-secure-views](https://docs.snowflake.com/en/user-guide/data-sharing-secure-views) |
-| Data Clean Rooms | [docs.snowflake.com/en/user-guide/cleanrooms/cleanrooms-about](https://docs.snowflake.com/en/user-guide/cleanrooms/cleanrooms-about) |
+| Data Clean Rooms | [docs.snowflake.com/en/user-guide/cleanrooms/overview](https://docs.snowflake.com/en/user-guide/cleanrooms/overview) |
 | Snowflake Marketplace | [docs.snowflake.com/en/user-guide/data-marketplace](https://docs.snowflake.com/en/user-guide/data-marketplace) |
 | Reader Accounts | [docs.snowflake.com/en/user-guide/data-sharing-reader-create](https://docs.snowflake.com/en/user-guide/data-sharing-reader-create) |
 """)
@@ -58,7 +58,7 @@ st.markdown("""
 | Row Access Policies | [docs.snowflake.com/en/user-guide/security-row-intro](https://docs.snowflake.com/en/user-guide/security-row-intro) |
 | Access History | [docs.snowflake.com/en/user-guide/access-history](https://docs.snowflake.com/en/user-guide/access-history) |
 | Object Tagging | [docs.snowflake.com/en/user-guide/object-tagging](https://docs.snowflake.com/en/user-guide/object-tagging) |
-| Trust Center | [docs.snowflake.com/en/user-guide/trust-center](https://docs.snowflake.com/en/user-guide/trust-center) |
+| Trust Center | [docs.snowflake.com/en/user-guide/trust-center/overview](https://docs.snowflake.com/en/user-guide/trust-center/overview) |
 """)
 
 st.markdown("## Cost Management")

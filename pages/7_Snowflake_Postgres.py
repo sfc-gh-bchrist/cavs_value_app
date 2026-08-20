@@ -106,7 +106,7 @@ with tab1:
     | Patching & upgrades | No maintenance windows to schedule |
     | High availability | Built-in HA option, automatic failover |
     | Backups | Automatic, no cron jobs |
-    | Connection pooling | PgBouncer built-in for high concurrency |
+    | Connection pooling | PgBouncer built-in for high concurrency | Built-in connection pooling for high concurrency |
     | Security | Private network isolation, TLS enforced |
     | Monitoring | Integrated with Snowflake account |
     
@@ -116,7 +116,8 @@ with tab1:
       COMPUTE_POOL = 'STANDARD_2'
       STORAGE_SIZE_GB = 100
       POSTGRES_VERSION = '17'
-      ENABLE_HA = TRUE;
+      ENABLE_HA = TRUE
+      AUTHENTICATION_AUTHORITY = POSTGRES;
     
     -- That's it. Connect with any Postgres client.
     ```
@@ -129,7 +130,7 @@ with tab2:
     st.markdown("""
     ### Full PostgreSQL Compatibility
     
-    Snowflake Postgres runs **real PostgreSQL** (versions 16, 17, 18) — not a Postgres-compatible engine:
+    Snowflake Postgres runs **real PostgreSQL** (versions 16 and 17 currently available) — not a Postgres-compatible engine:
     
     - **All your existing code works** — ORMs, migrations, application queries
     - **All your tools work** — psql, pgAdmin, DBeaver, any Postgres client

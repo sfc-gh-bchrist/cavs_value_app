@@ -153,7 +153,7 @@ with tab2:
     |----------|-----------|------|--------------|
     | **Tableau dashboards** | `WH_ANALYTICS` | Medium | 2 min |
     | **dbt transformations** | `WH_TRANSFORM` | Large | 1 min |
-    | **Data ingestion (Openflow)** | `WH_INGEST` | Small | Immediate |
+    | **Data ingestion (external sources)** | `WH_INGEST` | Small | Immediate |
     | **Data science / ML** | `WH_DATA_SCIENCE` | X-Large | 5 min |
     | **Ad-hoc queries** | `WH_ADHOC` | X-Small | 1 min |
     
